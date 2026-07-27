@@ -1,12 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
-import axios from 'axios';
 import type { VerificationSuccess, VerificationFailure } from '../interfaces';
 import { formatDate } from '../lib/utils';
 import {
-  ShieldCheck, AlertTriangle, Sprout, Calendar, Package, Hash,
-  Tag, IndianRupee, Layers, FileText, CheckCircle2, Phone, Mail, MapPin,
-  Building2, ArrowLeft, RefreshCw, Award
+  ShieldCheck, AlertTriangle, Sprout,
+  Layers, FileText, CheckCircle2, Phone, Mail, MapPin,
+  Building2, ArrowLeft, Award
 } from 'lucide-react';
 
 import api from '../services/api';

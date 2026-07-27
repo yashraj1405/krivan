@@ -8,10 +8,7 @@ import {
   Truck,
   ArrowRight,
   ShieldCheck,
-  Package,
   Boxes,
-  CheckCircle2,
-  Building,
 } from 'lucide-react';
 import api from '../services/api';
 import { DataTable } from '../components/ui/DataTable';

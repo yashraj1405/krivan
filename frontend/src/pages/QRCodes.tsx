@@ -10,7 +10,7 @@ import { ConfirmationDialog } from '../components/ui/ConfirmationDialog';
 import { useToast } from '../components/ui/Toast';
 import { formatDate, formatDateTime } from '../lib/utils';
 import {
-  QrCode, Download, Eye, Layers, Copy, Check, RefreshCw,
+  Download, Eye, Layers, Copy, Check, RefreshCw,
   Printer, ExternalLink, Sparkles
 } from 'lucide-react';
 

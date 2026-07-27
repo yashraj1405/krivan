@@ -7,7 +7,7 @@ import { SearchBar } from '../components/ui/SearchBar';
 import { Badge } from '../components/ui/Badge';
 import { Modal } from '../components/ui/Modal';
 import { ConfirmationDialog } from '../components/ui/ConfirmationDialog';
-import { Plus, Phone, Mail, MapPin, Building, Eye, Edit2, Trash2, ShieldCheck, Tag } from 'lucide-react';
+import { Plus, Phone, Mail, MapPin, Building, Eye, Edit2, Trash2, ShieldCheck } from 'lucide-react';
 
 export const Dealers: React.FC = () => {
   const queryClient = useQueryClient();
@@ -652,7 +652,7 @@ export const Dealers: React.FC = () => {
         title="Delete Dealer Profile"
         message={`Are you sure you want to remove dealer "${deleteDealerTarget?.dealer_name}"?`}
         confirmLabel="Delete Dealer"
-        isDanger
+        variant="danger"
       />
     </div>
   );

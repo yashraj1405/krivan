@@ -7,7 +7,7 @@ export interface BatchQRInfo {
   qr_image_path?: string | null;
   image_url: string;
   verify_url: string;
-  download_url: str;
+  download_url: string;
   qr_generated_at?: string | null;
   scan_count: number;
   product?: Product;
@@ -27,7 +27,7 @@ export interface VerificationSuccess {
   verified: true;
   product_name: string;
   product_code: string;
-  batch_number: str;
+  batch_number: string;
   manufacturing_date: string;
   expiry_date: string;
   net_content?: string | null;

@@ -16,7 +16,7 @@ import { formatDate } from '../lib/utils';
 import {
   Layers, Plus, Edit3, Trash2, Eye, Save, X, Loader2,
   Calendar, Package, Hash, QrCode, FileText, ClipboardList, IndianRupee, Tag,
-  History, Truck, CheckCircle2, QrCode as QrIcon, ArrowRight
+  History, Truck, CheckCircle2, QrCode as QrIcon
 } from 'lucide-react';
 
 const BATCH_STATUS_OPTIONS: BatchStatus[] = [
@@ -749,7 +749,7 @@ export const Batches: React.FC = () => {
         title="Delete Batch"
         message={`Are you sure you want to delete batch "${deleteBatchTarget?.batch_number}"?`}
         confirmLabel="Delete Batch"
-        isDanger
+        variant="danger"
       />
     </div>
   );

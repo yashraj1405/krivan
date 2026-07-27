@@ -1,10 +1,9 @@
 import React, { useState } from 'react';
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
 import api from '../services/api';
-import type { Dispatch as IDispatch, DispatchListResponse, Batch, BatchListResponse, Dealer, DealerListResponse } from '../interfaces';
+import type { Dispatch as IDispatch, DispatchListResponse, BatchListResponse, DealerListResponse } from '../interfaces';
 import { DataTable, type Column } from '../components/ui/DataTable';
 import { SearchBar } from '../components/ui/SearchBar';
-import { Badge } from '../components/ui/Badge';
 import { Modal } from '../components/ui/Modal';
 import { ConfirmationDialog } from '../components/ui/ConfirmationDialog';
 import { formatDate } from '../lib/utils';
@@ -14,8 +13,8 @@ export const DispatchPage: React.FC = () => {
   const queryClient = useQueryClient();
 
   const [search, setSearch] = useState('');
-  const [batchFilter, setBatchFilter] = useState('');
-  const [dealerFilter, setDealerFilter] = useState('');
+  const [batchFilter] = useState('');
+  const [dealerFilter] = useState('');
   const [page, setPage] = useState(1);
   const [pageSize, setPageSize] = useState(10);
   const [sortBy, setSortBy] = useState('created_at');
@@ -604,7 +603,7 @@ export const DispatchPage: React.FC = () => {
         title="Cancel Dispatch Record"
         message={`Are you sure you want to cancel dispatch "${deleteDispatchTarget?.dispatch_number}"?`}
         confirmLabel="Cancel Dispatch"
-        isDanger
+        variant="danger"
       />
     </div>
   );
