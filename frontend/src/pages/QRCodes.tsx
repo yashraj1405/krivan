@@ -15,9 +15,13 @@ import {
 } from 'lucide-react';
 
 const getBackendUrl = () => {
+  if (import.meta.env.VITE_API_URL) {
+    return import.meta.env.VITE_API_URL.replace(/\/api\/v1\/?$/, '');
+  }
   const host = typeof window !== 'undefined' && window.location.hostname ? window.location.hostname : 'localhost';
   return `http://${host}:8000`;
 };
+
 
 export const QRCodes: React.FC = () => {
   const { toast } = useToast();
